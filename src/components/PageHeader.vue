@@ -3,7 +3,8 @@
         <div class="m-3 lg:mr-auto lg:ml-auto">
             <h1 class="font-slab text-3xl mb-3">👏 Hi, there!</h1>
             <h1 class="font-slab text-5xl mb-3">I'm <b>Hemingtsai</b>,</h1>
-            <h1 class="font-slab text-5xl">I'm a Developer!</h1>
+            <h1 class="font-slab text-5xl">I'm a <div ref="typewriterElement" class="inline-block"></div>
+            </h1>
             <p class="font-slab py-6 text-justify">
                 Don't compare your life with others. There's no comparison between the sun and the moon. They shine when
                 it's their time.
@@ -21,3 +22,24 @@
         </div>
     </div>
 </template>
+
+<script setup>
+import { onMounted, onUnmounted, ref } from "vue";
+import Typed from "typed.js";
+const typewriterElement = ref(null);
+let typed = null;
+onMounted(() => {
+    typed = new Typed(typewriterElement.value, {
+        strings: ["Developer!", "Middle School Student!", "Interesting man!"],
+        typeSpeed: 40,
+        backSpeed: 20,
+        loop: true,
+    });
+});
+onUnmounted(() => {
+    if (typed) {
+        typed.destroy();
+        typed = null;
+    }
+});
+</script>
