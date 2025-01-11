@@ -23,11 +23,11 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
 import Typed from "typed.js";
 const typewriterElement = ref(null);
-let typed = null;
+let typed: Typed | any = null;
 onMounted(() => {
     typed = new Typed(typewriterElement.value, {
         strings: ["Developer!", "Middle School Student!", "Interesting man!"],
@@ -37,7 +37,7 @@ onMounted(() => {
     });
 });
 onUnmounted(() => {
-    if (typed) {
+    if (typed && typed != null) {
         typed.destroy();
         typed = null;
     }
