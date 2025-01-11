@@ -1,33 +1,35 @@
-# hmtsai_personal_homepage
+<!-- Project LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/hemingtsai/personal_homepage">
+    <img src="images/logo.png" alt="Logo" width="160" height="160">
+  </a>
+  <h3 align="center">Hemingtsai's Personal Homepage</h3>
+</div>
 
-This template should help get you started developing with Vue 3 in Vite.
+## Brief
 
-## Recommended IDE Setup
+This is a part of *Project Luna* .
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+It's Hemingtsai's personal homepage.
 
-## Type Support for `.vue` Imports in TS
+## Todo List
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- [X] Page Header.
+- [X] Page Footer.
+- [X] Hero.
+- [ ] Integration with Blog System.
 
-## Customize configuration
+## Develop
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Start Development Server
 
-## Project Setup
-
-```sh
-pnpm install
+```bash
+pnpm run dev
 ```
 
-### Compile and Hot-Reload for Development
+### Build
 
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
+```bash
+pnpm run build
 ```
