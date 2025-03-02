@@ -6,7 +6,7 @@ export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      slab: ['Solway','sans-serif'],
+      slab: ['Solway', 'sans-serif'],
     },
     extend: {},
   },

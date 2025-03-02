@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
   <div class="navbar bg-base-100">
-    <a class="btn btn-ghost text-xl">Hmtsai's Website</a>
+    <RouterLink class="btn btn-ghost text-xl" to="/"
+      >Hmtsai's Website</RouterLink
+    >
     <div class="grow"></div>
-    <a class="btn btn-ghost text-lg" href="https://blog.hmtsai.cn">Blog</a>
+    <RouterLink class="btn btn-ghost test-lg" to="/blog">Blog</RouterLink>
   </div>
 
   <RouterView />
@@ -18,7 +20,9 @@ import { RouterLink, RouterView } from 'vue-router'
     </aside>
     <nav>
       <h6 class="footer-title">Projects</h6>
-      <a class="link link-hover" href="https://study-area.org.cn">Study Area CN</a>
+      <a class="link link-hover" href="https://study-area.org.cn"
+        >Study Area CN</a
+      >
       <a class="link link-hover" href="https://git.hmtsai.cn">Hmtsai Gitea</a>
     </nav>
     <nav>
