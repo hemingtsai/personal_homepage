@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="js">
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
@@ -6,7 +6,7 @@ const loading = ref(false);
 const posts = ref(null);
 
 loading.value = true;
-fetch("http://localhost:8000/api/posts_list")
+fetch("https://lunalog.hmtsai.cn/posts_list")
   .then((response) => response.json())
   .then((data) => {
     posts.value = data;

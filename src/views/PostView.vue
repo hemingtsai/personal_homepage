@@ -11,7 +11,7 @@ const loading = ref(false);
 const post = ref("");
 
 loading.value = true;
-fetch(`http://localhost:8000/api/posts/${route.params.id}`)
+fetch(`https://lunalog.hmtsai.cn/posts/${route.params.id}`)
   .then((response) => {
     if (!response.ok) {
       console.log("Response was not ok");
@@ -21,6 +21,7 @@ fetch(`http://localhost:8000/api/posts/${route.params.id}`)
   .then((data) => {
     const md = new MarkdownIt({})
       .use(markdownItHighlightjs)
+      .use()
       .use(markdownItClass, {
         h1: ["text-4xl", "font-bold"],
         h2: ["text-3xl", "font-bold"],
