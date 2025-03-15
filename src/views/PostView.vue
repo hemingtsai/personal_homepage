@@ -19,9 +19,14 @@ fetch(`https://lunalog.hmtsai.cn/posts/${route.params.id}`)
     return response.json();
   })
   .then((data) => {
+    if (!data) {
+      console.error("Invalid data received", data);
+      post.value = "Error: Post content not found.";
+      return;
+    }
+
     const md = new MarkdownIt({})
       .use(markdownItHighlightjs)
-      .use()
       .use(markdownItClass, {
         h1: ["text-4xl", "font-bold"],
         h2: ["text-3xl", "font-bold"],
@@ -32,7 +37,11 @@ fetch(`https://lunalog.hmtsai.cn/posts/${route.params.id}`)
       });
 
     post.value = md.render(data);
-
+    loading.value = false;
+  })
+  .catch((error) => {
+    console.error("Error fetching post:", error);
+    post.value = "Error loading post.";
     loading.value = false;
   });
 </script>
