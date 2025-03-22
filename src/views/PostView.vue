@@ -47,11 +47,14 @@ fetch(`https://lunalog.hmtsai.cn/posts/${route.params.id}`)
 </script>
 
 <template>
-  <div class="lg:p-5 lg:pr-auto lg:pl-auto w-full h-full">
+  <div class="lg:p-5 lg:pr-auto lg:pl-auto h-full m-3 lg:mr-auto lg:ml-auto">
     <div v-if="loading" class="flex">
       <span class="font-slab">Loading</span>
       <span class="loading loading-spinner loading-xl"></span>
     </div>
-    <div class="prose md:prose-lg lg:prose-xl font-slab" v-html="post"></div>
+    <div
+      class="prose md:prose-lg lg:prose-xl font-slab mr-auto ml-auto"
+      v-html="post"
+    ></div>
   </div>
 </template>

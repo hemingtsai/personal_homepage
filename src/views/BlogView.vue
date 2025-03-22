@@ -15,7 +15,7 @@ fetch("https://lunalog.hmtsai.cn/posts_list")
 </script>
 
 <template>
-  <div class="lg:p-5 lg:pr-auto lg:pl-auto w-full h-full">
+  <div class="p-3 lg:p-5 lg:pr-auto lg:pl-auto w-full h-full">
     <h1 class="font-slab font-bold text-5xl mb-3">Blog</h1>
     <h3 class="font-slab font-bold text-2xl mb-3">Posts</h3>
     <p class="font-slab py-6 text-justify">Write your creative on paper.</p>
@@ -27,7 +27,9 @@ fetch("https://lunalog.hmtsai.cn/posts_list")
 
     <div v-if="posts">
       <div v-for="(post, index) in posts">
-        <RouterLink :to="`/post/${index}`">{{ post.title }}</RouterLink>
+        <RouterLink :to="`/post/${index}`" class="font-slab">{{
+          post.title
+        }}</RouterLink>
       </div>
     </div>
   </div>
