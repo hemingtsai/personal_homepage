@@ -26,11 +26,15 @@ fetch("https://lunalog.hmtsai.cn/posts_list")
     </div>
 
     <div v-if="posts">
-      <div v-for="(post, index) in posts">
-        <RouterLink :to="`/post/${index}`" class="font-slab">{{
-          post.title
-        }}</RouterLink>
-      </div>
+      <ul class="list bg-base-100 rounded-box shadow-md">
+        <li class="list-row">
+          <div v-for="(post, index) in posts">
+            <RouterLink :to="`/post/${index}`" class="font-slab">{{
+              post.title
+            }}</RouterLink>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>

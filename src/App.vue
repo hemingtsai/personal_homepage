@@ -11,7 +11,11 @@ import { RouterLink, RouterView } from "vue-router";
     <RouterLink class="btn btn-ghost test-lg" to="/blog">Blog</RouterLink>
   </div>
 
-  <RouterView />
+  <router-view v-slot="{ Component, route }">
+    <transition name="fade">
+      <component :is="Component" :key="route.path" />
+    </transition>
+  </router-view>
 
   <footer class="footer bg-neutral text-neutral-content p-10">
     <aside>
