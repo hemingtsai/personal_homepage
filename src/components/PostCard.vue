@@ -1,28 +1,23 @@
 <script setup lang="ts">
 const props = defineProps({
-    photo: String,
     title: { String, required: true },
-    context: { String, required: true }
+    context: { String, required: true },
+    href: { String, required: true }
 })
-
-function getPhoto(): String {
-    if (props.photo == undefined) {
-        return "https://"
-    }
-    return "";
-}
 </script>
 
 <template>
     <div class="card lg:card-side bg-base-100 shadow-xl">
-        <figure>
-            <img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Album" />
-        </figure>
         <div class="card-body">
-            <h2 class="card-title">New album is released!</h2>
-            <p>Click the button to listen on Spotiwhy app.</p>
+            <h2 class="card-title font-slab"> {{ props.title }} </h2>
+            <p class="font-slab"> {{ props.context }} </p>
             <div class="card-actions justify-end">
-                <button class="btn btn-primary">Listen</button>
+
+                <RouterLink :to="`/post/${index}`" class="btn btn-primary font-slab">{{
+                    post.title
+                    }}</RouterLink>
+
+                <button class="btn btn-primary">Visit</button>
             </div>
         </div>
     </div>
