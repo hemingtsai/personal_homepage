@@ -117,7 +117,6 @@ html, body {
   font-family: 'Merriweather', serif;
   overflow-x: hidden;
 }
-
 /* Body Flex Layout */
 body {
   display: flex;
@@ -125,10 +124,6 @@ body {
   min-height: 100vh;
 }
 
-/* Font family for serif */
-.font-serif {
-  font-family: 'Merriweather', serif;
-}
 
 /* Backdrop blur styles */
 .backdrop-blur-sm {
