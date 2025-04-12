@@ -17,10 +17,7 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: 'HeroSection',
-};
+<script setup lang="ts">
 </script>
 
 <style scoped>
