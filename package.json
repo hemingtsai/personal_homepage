@@ -1,6 +1,6 @@
 {
   "name": "hmtsai_personal_homepage",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,6 +11,7 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "markdown-it": "^14.1.0",
     "markdown-it-code-copy": "^0.2.1",
     "markdown-it-highlightjs": "^4.2.0",

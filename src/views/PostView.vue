@@ -11,7 +11,7 @@ const loading = ref(false);
 const post = ref("");
 
 loading.value = true;
-fetch(`https://lunalog.hmtsai.cn/posts/${route.params.id}`)
+fetch(`${import.meta.env.VITE_LUNALOG_SERVER}/posts/${route.params.id}`)
   .then((response) => {
     if (!response.ok) {
       console.log("Response was not ok");
@@ -26,15 +26,19 @@ fetch(`https://lunalog.hmtsai.cn/posts/${route.params.id}`)
     }
 
     const md = new MarkdownIt({})
-      .use(markdownItHighlightjs)
-      .use(markdownItClass, {
-        h1: ["text-4xl", "font-bold"],
-        h2: ["text-3xl", "font-bold"],
-        h3: ["text-2xl", "font-bold"],
-        h4: ["text-xl", "font-bold"],
-        h5: ["font-bold"],
-        a: ["text-blue-300", "hover:underline"],
-      });
+    .use(markdownItHighlightjs)
+    .use(markdownItClass, {
+      h1: ["text-4xl", "font-bold",  "mb-4"],
+      h2: ["text-3xl", "font-bold",  "mb-3"],
+      h3: ["text-2xl", "font-semibold", "mb-3"],
+      h4: ["text-xl", "font-semibold","mb-3"],
+      h5: ["text-lg", "font-semibold", "mb-2"],
+      a: ["text-blue-500", "hover:text-teal-400", "hover:underline"],
+      p: ["text-base", "leading-relaxed", "mb-4"],
+      ul: ["list-disc", "pl-5", "space-y-2"],
+      ol: ["list-decimal", "pl-5", "space-y-2"],
+      li: ["text-gray-600"],
+    });
 
     post.value = md.render(data);
     loading.value = false;
@@ -47,7 +51,7 @@ fetch(`https://lunalog.hmtsai.cn/posts/${route.params.id}`)
 </script>
 
 <template>
-  <div class="lg:p-5 lg:pr-auto lg:pl-auto h-full m-3 lg:mr-auto lg:ml-auto">
+  <div class="lg:p-5 lg:pr-auto lg:pl-auto h-full  m-3 lg:mr-auto lg:ml-auto">
     <div v-if="loading" class="flex">
       <span class="font-slab">Loading</span>
       <span class="loading loading-spinner loading-xl"></span>
