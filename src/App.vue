@@ -30,11 +30,11 @@ watch(
 <template>
   <div class="min-h-screen flex flex-col">
     <div class="navbar w-full flex">
-      <RouterLink class="btn btn-ghost text-2xl font-bold text-white" to="/">
+      <RouterLink class="font-serif btn btn-ghost text-2xl font-bold dark:text-white" to="/">
         Hmtsai's Website
       </RouterLink>
       <div class="grow"></div>
-      <RouterLink class="btn btn-ghost text-lg font-medium text-white transition-colors duration-200 hover:text-teal-500" to="/blog">
+      <RouterLink class="font-serif btn btn-ghost text-lg font-medium dark:text-white transition-colors duration-200 hover:text-teal-500" to="/blog">
         Blog
       </RouterLink>
     </div>
@@ -50,8 +50,8 @@ watch(
   <div class="footer bg-gray-800 backdrop-blur-lg text-white py-8">
     <div class="container mx-auto px-4 text-center flex flex-col justify-center items-center">
       <div class="mb-6">
-        <p class="text-lg font-medium">Hmtsai's Personal Website 2024 💗 Forever</p>
-        <p class="text-sm">Copyright © 2025 - All rights reserved by Hemingtsai.</p>
+        <p class="text-lg font-serif font-medium">Hmtsai's Personal Website 2024 💗 Forever</p>
+        <p class="text-sm font-serif">Copyright © 2025 - All rights reserved by Hemingtsai.</p>
       </div>
     </div>
   </div>

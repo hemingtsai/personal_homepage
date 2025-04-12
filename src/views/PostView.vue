@@ -53,11 +53,11 @@ fetch(`${import.meta.env.VITE_LUNALOG_SERVER}/posts/${route.params.id}`)
 <template>
   <div class="lg:p-5 lg:pr-auto lg:pl-auto h-full  m-3 lg:mr-auto lg:ml-auto">
     <div v-if="loading" class="flex">
-      <span class="font-slab">Loading</span>
+      <span class="font-serif">Loading</span>
       <span class="loading loading-spinner loading-xl"></span>
     </div>
     <div
-      class="prose md:prose-lg lg:prose-xl font-slab mr-auto ml-auto"
+      class="prose md:prose-lg lg:prose-xl font-serif mr-auto ml-auto"
       v-html="post"
     ></div>
   </div>

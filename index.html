@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html lang="" class="h-full w-full">
+<html lang="en" class="h-full w-full">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hmtsai's Website</title>
+
+    <!-- Title of the page -->
+    <title>Hemingtsai's Website - Personal Portfolio and Blog</title>
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Welcome to Hemingtsai's personal website, where I share my portfolio, blog posts, and thoughts on development and technology.">
+
+    <!-- Meta keywords -->
+    <meta name="keywords" content="Hemingtsai, personal website, blog, portfolio, developer, technology, programming, software development">
+
+    <!-- Meta author -->
+    <meta name="author" content="Hemingtsai">
+
+    <!-- Open Graph Meta Tags (for social sharing) -->
+    <meta property="og:title" content="Hemingtsai's Website - Personal Portfolio and Blog">
+    <meta property="og:description" content="Welcome to Hemingtsai's personal website, where I share my portfolio, blog posts, and thoughts on development and technology.">
+    <meta property="og:url" content="https://www.hmtsai.cn">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hemingtsai's Website - Personal Portfolio and Blog">
+    <meta name="twitter:description" content="Welcome to Hemingtsai's personal website, where I share my portfolio, blog posts, and thoughts on development and technology.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Prevent site from being indexed by search engines if not ready (can be removed when ready) -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Charset for better compatibility -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Structured Data (JSON-LD for SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hemingtsai",
+        "url": "https://www.hmtsai.cn",
+        "sameAs": [
+          "https://github.com/hemingtsai",
+        ],
+        "jobTitle": "Software Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "MyCompany"
+        }
+      }
+    </script>
   </head>
   <body class="h-full w-full">
     <div id="app" class="h-full w-full"></div>
+
+    <!-- Main JavaScript file -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
